@@ -234,7 +234,7 @@ for epoch in range(EPOCHS):
           str(disc_acc))
     print("-----------------------------------------------------------------")
 
-    if gen_acc > 35:  # (epoch + 1) % SAVE_FREQ == 0:
+    if (epoch + 1) % SAVE_FREQ == 0:
         print("saving models...")
         print()
         save_images(fixed_noise, str(get_time()))
